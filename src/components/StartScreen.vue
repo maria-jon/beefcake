@@ -12,7 +12,7 @@ defineProps<{ msg: string }>();
   </div>
   <div class="wrapper">
     <div class="content">
-      <img src="/src/assets/beefcake-sleeping.gif" alt="Beefcake sleeping" />
+      <img src="/src/assets/beefcake-sleeping-large.gif" width="760" height="760" alt="Beefcake sleeping" />
     </div>
     <OptionButton icon="/src/assets/vue.svg" msg="Start game"/>
   </div>
@@ -40,6 +40,11 @@ h1 {
   background: #cff0ff;
   border-radius: 10px;
   border: 4px solid #37312d;
+  overflow: hidden;
+}
+.content > img {
+    width: 380px;
+    height: 380px;
 }
 span > img {
     width: 45px;
