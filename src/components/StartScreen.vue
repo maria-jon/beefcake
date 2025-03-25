@@ -1,15 +1,20 @@
 <script setup lang="ts">
+import OptionButton from './OptionButton.vue';
+
+/* const props = */
 defineProps<{ msg: string }>();
 </script>
 
 <template>
   <div class="top-bar">
     <h1>{{ msg }}</h1>
-    <span>CLOSE</span>
+    <span><img src="" ></span>
   </div>
   <div class="wrapper">
-    <div class="content">Hejhej</div>
-    <button>Text</button>
+    <div class="content">
+      <img src="/src/assets/beefcake-sleeping.gif" alt="Beefcake sleeping" />
+    </div>
+    <OptionButton icon="/src/assets/vue.svg" msg="Start game"/>
   </div>
 </template>
 <style scoped lang="scss">
@@ -35,5 +40,9 @@ h1 {
   background: #cff0ff;
   border-radius: 10px;
   border: 4px solid #37312d;
+}
+span > img {
+    width: 45px;
+    height: 45px;
 }
 </style>
