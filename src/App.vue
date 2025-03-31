@@ -5,7 +5,7 @@ import StartScreen from './components/StartScreen.vue';
 <template>
   <div class="wrapper">
     <main>
-      <StartScreen msg="Beefcake" />
+      <StartScreen />
     </main>
   </div>
 </template>

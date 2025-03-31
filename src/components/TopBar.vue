@@ -1,14 +1,13 @@
 <script setup lang="ts">
 /* const props = */
 defineProps<{ title: string }>();
-
 </script>
 
 <template>
-    <div class="top-bar">
-        <h1>{{ title }}</h1>
-        <span><img src="" /></span>
-    </div>
+  <div class="top-bar">
+    <h1>{{ title }}</h1>
+    <span><img src="" /></span>
+  </div>
 </template>
 
 <style scoped lang="scss">

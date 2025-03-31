@@ -2,8 +2,9 @@
 import OptionButton from './OptionButton.vue';
 import TopBar from './TopBar.vue';
 
-// say hello
-console.log('Hello, World!');
+function handleChoice() {
+  console.log('button pressed');
+}
 </script>
 
 <template>
@@ -12,12 +13,11 @@ console.log('Hello, World!');
     <div class="content">
       <img src="/src/assets/beefcake-sleeping-large.gif" width="760" height="760" alt="Beefcake sleeping" />
     </div>
-    <OptionButton icon="/src/assets/vue.svg" msg="Start game" />
+    <OptionButton icon="/src/assets/vue.svg" msg="Start game" @click="handleChoice" />
     <OptionButton icon="/src/assets/vue.svg" msg="About the game" />
   </div>
 </template>
 <style scoped lang="scss">
-
 .wrapper {
   background: #f4f0ed;
   display: flex;
