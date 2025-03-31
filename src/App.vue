@@ -3,9 +3,11 @@ import StartScreen from './components/StartScreen.vue';
 </script>
 
 <template>
-  <main>
-    <StartScreen msg="Beefcake" />
-  </main>
+  <div class="wrapper">
+    <main>
+      <StartScreen msg="Beefcake" />
+    </main>
+  </div>
 </template>
 
 <style scoped>
@@ -16,5 +18,12 @@ main {
   overflow: hidden;
   border: 4px solid #37312d;
   margin: 16px;
+}
+.wrapper {
+  min-width: 100vw;
+  height: auto;
+  background-image: url('/src/assets/Tile.svg/');
+  display: flex;
+  justify-content: center;
 }
 </style>
