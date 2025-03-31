@@ -13,6 +13,7 @@ console.log('Hello, World!');
       <img src="/src/assets/beefcake-sleeping-large.gif" width="760" height="760" alt="Beefcake sleeping" />
     </div>
     <OptionButton icon="/src/assets/vue.svg" msg="Start game" />
+    <OptionButton icon="/src/assets/vue.svg" msg="About the game" />
   </div>
 </template>
 <style scoped lang="scss">
@@ -24,6 +25,7 @@ console.log('Hello, World!');
   align-items: center;
   padding: 16px;
   height: 100%;
+  gap: 16px;
 }
 .content {
   width: 380px;

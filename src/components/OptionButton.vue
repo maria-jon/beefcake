@@ -10,7 +10,6 @@ defineProps<{ msg: string }>();
 <style scoped>
 button {
   width: 340px;
-  margin: 16px;
   border-radius: 10px;
   border: 4px solid #37312d;
   padding: 12px 16px;
