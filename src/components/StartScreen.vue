@@ -11,7 +11,11 @@ function handleChoice() {
 <template>
   <TopBar title="Beefcake" />
   <div class="wrapper">
-    <ContentDisplay />
+    <ContentDisplay 
+    src="src/assets/beefcake-sleeping-large.gif"
+    width="760"
+    height="760"
+    alt="Beefcake sleeping"/>
     <OptionButton icon="/src/assets/vue.svg" msg="Start game" @click="handleChoice" />
     <OptionButton icon="/src/assets/vue.svg" msg="About the game" />
   </div>
