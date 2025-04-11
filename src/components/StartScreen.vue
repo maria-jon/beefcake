@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import OptionButton from './OptionButton.vue';
 import TopBar from './TopBar.vue';
+import ContentDisplay from './ContentDisplay.vue';
 
 function handleChoice() {
   console.log('button pressed');
@@ -10,9 +11,7 @@ function handleChoice() {
 <template>
   <TopBar title="Beefcake" />
   <div class="wrapper">
-    <div class="content">
-      <img src="/src/assets/beefcake-sleeping-large.gif" width="760" height="760" alt="Beefcake sleeping" />
-    </div>
+    <ContentDisplay />
     <OptionButton icon="/src/assets/vue.svg" msg="Start game" @click="handleChoice" />
     <OptionButton icon="/src/assets/vue.svg" msg="About the game" />
   </div>
@@ -26,17 +25,5 @@ function handleChoice() {
   padding: 16px;
   height: 100%;
   gap: 16px;
-}
-.content {
-  width: 380px;
-  height: 380px;
-  background: #cff0ff;
-  border-radius: 10px;
-  border: 4px solid #37312d;
-  overflow: hidden;
-}
-.content > img {
-  width: 380px;
-  height: 380px;
 }
 </style>
