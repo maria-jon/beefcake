@@ -1,4 +1,15 @@
-export default [
+export interface IChoice {
+    text: string;
+    nextId: number;
+}
+
+export interface IScene {
+    id: number;
+    text: string;
+    choices: IChoice[]
+}
+
+const storyData: IScene[] = [
     {
         id: 1,
         text: "What can you do to find it?",
@@ -282,3 +293,5 @@ export default [
         ]
     },
 ]
+
+export default storyData;
