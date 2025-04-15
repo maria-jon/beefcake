@@ -9,13 +9,20 @@ export interface IScene {
     choices: IChoice[]
 }
 
-const storyData: IScene[] = [
+export const storyData: IScene[] = [
+    {
+        id: 0,
+        text: "Your name is Beefcake. You are a two year old Staffordshire Bullterrier. You live with your mum in a small apartment in Malmö, Sweden. You are sleeping on the couch, dreaming about chasing wild rabbits and playing with all the kids in the neighbourhood. You should probably wake up soon.",
+        choices: [
+            { text: "Wake up", nextId: 38 },
+        ],
+    },
     {
         id: 1,
-        text: "What can you do to find it?",
+        text: "OH MY DOG, your ball is gone! What can you do to find it?",
         choices: [
             { text: "Look around at home", nextId: 2 },
-            { text: "Go somewhere else to look", nextId: 3 }
+            { text: "Go somewhere else to look", nextId: 6 }
         ],
     },
     {
@@ -103,7 +110,7 @@ const storyData: IScene[] = [
     },
     {
         id: 13,
-        text: "I had a favourite ball once, too... I ate its squeaker with some fava beans and a nice Chianti",
+        text: "The dog looks at you with cloudy eyes and says: I had a favourite ball once, too... I ate its squeaker with some fava beans and a nice Chianti",
         choices: [
             { text: "You don't trust this dog at all", nextId: 15 }
         ]
@@ -287,6 +294,20 @@ const storyData: IScene[] = [
     },
     {
         id: 38,
+        text: "You do the downward dog and stretch out your paws. It feels really good. You look around for your ball, but it's nowhere to be found. You feel a sense of panic rise inside your chest.",
+        choices: [
+            { text: "Wasn't the ball here, just now?", nextId: 1 }
+        ]
+    },
+    {
+        id: 39,
+        text: "The end",
+        choices: [
+            { text: "Ball ball ball BALL", nextId: 0 }
+        ]
+    },
+    {
+        id: 40,
         text: "The end",
         choices: [
             { text: "Ball ball ball BALL", nextId: 0 }

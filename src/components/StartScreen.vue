@@ -3,8 +3,10 @@ import OptionButton from './OptionButton.vue';
 import TopBar from './TopBar.vue';
 import ContentDisplay from './ContentDisplay.vue';
 
+const emit = defineEmits(['switch']);
+
 function handleChoice() {
-  console.log('button pressed');
+  emit('switch');
 }
 </script>
 
