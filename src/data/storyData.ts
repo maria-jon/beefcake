@@ -5,21 +5,28 @@ export interface IChoice {
 
 export interface IScene {
     id: number;
+    title?: string;
     text: string;
+    text2?: string;
+    text3?: string;
     choices: IChoice[]
 }
 
 export const storyData: IScene[] = [
     {
         id: 0,
-        text: "Your name is Beefcake. You are a two year old Staffordshire Bullterrier. You live with your mum in a small apartment in Malmö, Sweden. You are sleeping on the couch, dreaming about chasing wild rabbits and playing with all the kids in the neighbourhood. You should probably wake up soon.",
+        text: "Your name is Beefcake. You are a two year old Staffordshire Bullterrier.",
+        text2: "You live with your mum in a small apartment in Malmö, Sweden. You are sleeping on the couch, dreaming about chasing wild rabbits and playing with all the kids in the neighbourhood.",
+        text3: "You should probably wake up soon.",
         choices: [
             { text: "Wake up", nextId: 38 },
         ],
     },
     {
         id: 1,
-        text: "OH MY DOG, your ball is gone! What can you do to find it?",
+        title: "OH MY DOG",
+        text: "Your ball is gone!",
+        text2: "What can you do to find it?",
         choices: [
             { text: "Look around at home", nextId: 2 },
             { text: "Go somewhere else to look", nextId: 6 }
@@ -27,7 +34,10 @@ export const storyData: IScene[] = [
     },
     {
         id: 2,
-        text: 'Home',
+        title: "Home",
+        text: "Mum is sitting at the table and staring into her grey foldable rectangle again.",
+        text2: "Perhaps it's in your toy box with the barely-held-together badger stuffy you got for christmas, your lifebuoy toy, and that really boring chewing stick?",
+        text3: "Or it could be with all your cool toys with squeakers. (You don't understand why they aren't in the toy box with your other toys)",
         choices: [
             { text: "Toy box", nextId:  3 },
             { text: "The place where mum hides all the cool stuff", nextId: 3 },
@@ -36,28 +46,35 @@ export const storyData: IScene[] = [
     },
     {
         id: 3,
-        text: "The ball is not at home",
+        title: "No ball",
+        text: "You looked, but the ball is not there.",
         choices: [
             { text: "Damn, okay", nextId: 1 }
         ]
     },
     {
         id: 4,
-        text: "She gives you scratchies and kisses",
+        title: "Aw yiss!",
+        text: "Mum looks up from her rectangle. She gives you scratchies and kisses and says you are the bestest dog.",
+        text2: "She even scratches that hard-to-reach place behind your ears!",
         choices: [
-            { text: "Aw yiss", nextId: 5 }
+            { text: "What about my ball though", nextId: 5 }
         ]
     },
     {
         id: 5,
-        text: "Mum doesn't know",
+        title: "No ball",
+        text: "Mum says she doesn't know.",
         choices: [
             { text: "Damn, okay", nextId: 1 }
         ]
     },
     {
         id: 6,
-        text: "Where do you want to go?",
+        title: "Where do you want to go?",
+        text: "You remember playing with the ball at the dog park the other day. Perhaps it's still there?",
+        text2: "Izi is one of the coolest and bestest dogs you know. She probably knows what to do!",
+        text3: "Auntie's house is the best place in the world because she has kids that likes to play, lots of treats, and lives next to a forest, but she lives far away.",
         choices: [
             { text: "The dog park", nextId: 7 },
             { text: "Izi's house", nextId: 16 },
@@ -66,7 +83,7 @@ export const storyData: IScene[] = [
     },
     {
         id: 7,
-        text: "The dog park is on the other side of the big road with all the scary cars",
+        text: "The dog park is on the other side of the big road with all the scary cars.",
         choices: [
             { text: "Damn", nextId: 8 }
         ]
@@ -81,21 +98,24 @@ export const storyData: IScene[] = [
     },
     {
         id: 9,
-        text: "You feel an odd sense of accomplishment",
+        title: "Braveheart",
+        text: "You feel an odd sense of accomplishment.",
         choices: [
             { text: "Great!", nextId: 10 }
         ]
     },
     {
         id: 10,
-        text: "The dog park",
+        title: "The dog park",
+        text: "The dog park is a bit muddy from the rain, but you still feel your tail wagging from happiness of being here.",
         choices: [
             { text: "Finally!", nextId: 11 }
         ]
     },
     {
         id: 11,
-        text: "Another dog approaches the dog park",
+        title: "Intruder!",
+        text: "While you are looking for your ball, another dog is approaching the dog park. He looks old and a little scruffy.",
         choices: [
             { text: "Bark to scare it away", nextId: 12 },
             { text: "Wag your tail and say hi", nextId: 13 }
@@ -103,14 +123,16 @@ export const storyData: IScene[] = [
     },
     {
         id: 12,
-        text: "Sniff around the park to search for the ball",
+        text: "Sniff around the park to search for the ball.",
         choices: [
             { text: "Sniff sniff!", nextId: 15 }
         ]
     },
     {
         id: 13,
-        text: "The dog looks at you with cloudy eyes and says: I had a favourite ball once, too... I ate its squeaker with some fava beans and a nice Chianti",
+        title: "Uhm, okay",
+        text: "The dog looks at you with cloudy eyes and says:",
+        text2: "I had a favourite ball once, too... I ate its squeaker with some fava beans and a nice Chianti.",
         choices: [
             { text: "You don't trust this dog at all", nextId: 15 }
         ]
@@ -124,14 +146,16 @@ export const storyData: IScene[] = [
     },
     {
         id: 15,
-        text: "The ball is not at the dog park",
+        title: "No ball",
+        text: "The ball is not at the dog park.",
         choices: [
             { text: "Damn, okay", nextId: 1 }
         ]
     },
     {
         id: 16,
-        text: "Izi lives on the other side of the big intersection with all the scary cars",
+        title: "Walking to Izi's place",
+        text: "Izi lives on the other side of the big intersection with all the scary cars.",
         choices: [
             { text: "Walk!", nextId: 17 },
             { text: "Nevermind!", nextId: 1 }
@@ -139,21 +163,24 @@ export const storyData: IScene[] = [
     },
     {
         id: 17,
-        text: "It's scary, but you've walked here before",
+        title: "The bravest boy",
+        text: "It's scary, but you've walked here before.",
         choices: [
-            { text: "I am a brave pup", nextId: 18 }
+            { text: "I am a very very brave pup", nextId: 18 }
         ]
     },
     {
         id: 18,
-        text: "Izi's house",
+        title: "Izi's house",
+        text: "Izi lives in an apartment a few floors up, but you can't see her from here.",
         choices: [
-            { text: "Hello!", nextId: 19 }
+            { text: "Howl to make your presence known", nextId: 19 }
         ]
     },
     {
         id: 19,
-        text: "Izi doesn't seem to be home",
+        title: "Where are you?",
+        text: "Izi doesn't seem to be home.",
         choices: [
             { text: "Wait a little bit", nextId: 20 },
             { text: "Forget about it", nextId: 21 }
@@ -161,14 +188,16 @@ export const storyData: IScene[] = [
     },
     {
         id: 20,
-        text: "Izi doesn't show up",
+        title: "No show",
+        text: "Izi doesn't show up.",
         choices: [
             { text: "Damn, okay", nextId: 21 }
         ]
     },
     {
         id: 21,
-        text: "Where should you go next? Folkets park is close by, but you don't know why the ball would be there",
+        title: "Where should you go next?",
+        text: "Folkets park is close by, but you don't know why the ball would be there",
         choices: [
             { text: "Go to Folkets park", nextId: 22 },
             { text: "Go somewhere else", nextId: 1 }
@@ -176,9 +205,10 @@ export const storyData: IScene[] = [
     },
     {
         id: 22,
-        text: "Folkets park",
+        title: "Folkets park",
+        text: "You have fond memories of being here as a little pup.",
         choices: [
-            { text: "Let's see what Folkets park has to offer!", nextId: 23 }
+            { text: "Let's see what the park has to offer!", nextId: 23 }
         ]
     },
     {
@@ -192,6 +222,7 @@ export const storyData: IScene[] = [
     },
     {
         id: 24,
+        title: "No ball",
         text: "The ball is not at Folkets park",
         choices: [
             { text: "Damn, okay", nextId: 1 }
@@ -199,6 +230,7 @@ export const storyData: IScene[] = [
     },
     {
         id: 25,
+        title: "Killjoy",
         text: "Someone yells at you, pointing to a sign that says something, but you can't read.",
         choices: [
             { text: "There is a picture of a dog with a red line over them.", nextId: 24 }
@@ -206,6 +238,7 @@ export const storyData: IScene[] = [
     },
     {
         id: 26,
+        title: "Jetset dog",
         text: "Auntie doens't live in Malmö where you live",
         choices: [
             { text: "Damn, you almost forgot about that part", nextId: 27 }
@@ -294,7 +327,10 @@ export const storyData: IScene[] = [
     },
     {
         id: 38,
-        text: "You do the downward dog and stretch out your paws. It feels really good. You look around for your ball, but it's nowhere to be found. You feel a sense of panic rise inside your chest.",
+        title: "Biiig stretch",
+        text: "You do the downward dog and stretch out your paws. It feels really good.",
+        text2: "You look around for your ball, but it's nowhere to be found.",
+        text3: "You feel a sense of panic rise inside your chest.",
         choices: [
             { text: "Wasn't the ball here, just now?", nextId: 1 }
         ]
