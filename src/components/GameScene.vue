@@ -23,15 +23,12 @@ function selectChoice(choice: IChoice) {
   <TopBar title="Beefcake" />
   <div class="wrapper">
     <div class="content">
+      <h2>{{ scene.title }}</h2>
       <p>{{ scene.text }}</p>
+      <p>{{ scene.text2 }}</p>
+      <p>{{ scene.text3 }}</p>
     </div>
     <div>
-      <button 
-      v-for="(choice, index) in scene.choices"
-      :key="index"
-      @click="selectChoice(choice)"> 
-        {{ choice.text }}
-      </button>
       <OptionButton
       v-for="(choice, index) in scene.choices"
       :key="index"
@@ -61,6 +58,11 @@ function selectChoice(choice: IChoice) {
   overflow: hidden;
 }
 .content > p {
-  padding: 2rem;
+  padding: 0.2rem 2rem;
+  margin: 0;
+}
+h2 {
+  font-size: 2rem;
+  margin: 1rem;
 }
 </style>
