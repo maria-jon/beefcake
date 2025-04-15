@@ -1,10 +1,10 @@
 <script setup lang="ts">
- const props = defineProps<{ 
-    src: string,
-    width: string,
-    height: string,
-    alt: string
-    }>();
+const props = defineProps<{
+  src: string;
+  width: string;
+  height: string;
+  alt: string;
+}>();
 </script>
 
 <template>
