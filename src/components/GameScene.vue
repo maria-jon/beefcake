@@ -2,7 +2,7 @@
 import OptionButton from './OptionButton.vue';
 import TopBar from './TopBar.vue';
 import type { IScene, IChoice } from '../data/storyData';
-
+import iconQuestion from '/src/assets/icons/question-mark.png';
 
 const props = defineProps<{
   scene: IScene;
@@ -33,7 +33,7 @@ function selectChoice(choice: IChoice) {
       v-for="(choice, index) in scene.choices"
       :key="index"
       @click="selectChoice(choice)"
-      src="src/assets/icons/question-mark.png" 
+      :src="iconQuestion" 
       width="544" 
       height="544" 
       alt="icon" 
