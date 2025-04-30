@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import OptionButton from './OptionButton.vue';
 import TopBar from './TopBar.vue';
-import type { IScene, IChoice } from './data/storyData';
+import type { IScene, IChoice } from '../data/storyData';
 
 
 const props = defineProps<{
-  scene: Scene | undefined;
+  scene: IScene;
 }>();
 
 const emit = defineEmits<{
@@ -23,10 +23,10 @@ function selectChoice(choice: IChoice) {
   <TopBar title="Beefcake" />
   <div class="wrapper">
     <div class="content">
-      <h2>{{ scene.title }}</h2>
-      <p>{{ scene.text }}</p>
-      <p>{{ scene.text2 }}</p>
-      <p>{{ scene.text3 }}</p>
+      <h2>{{ props.scene.title }}</h2>
+      <p>{{ props.scene.text }}</p>
+      <p>{{ props.scene.text2 }}</p>
+      <p>{{ props.scene.text3 }}</p>
     </div>
     <div class="choices">
       <OptionButton
