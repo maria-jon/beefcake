@@ -28,7 +28,7 @@ function selectChoice(choice: IChoice) {
       <p>{{ scene.text2 }}</p>
       <p>{{ scene.text3 }}</p>
     </div>
-    <div>
+    <div class="choices">
       <OptionButton
       v-for="(choice, index) in scene.choices"
       :key="index"
@@ -64,5 +64,11 @@ function selectChoice(choice: IChoice) {
 h2 {
   font-size: 2rem;
   margin: 1rem;
+}
+
+.choices {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 </style>
