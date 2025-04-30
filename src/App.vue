@@ -13,7 +13,7 @@ const currentSceneId = ref<number>(0);
   
 // const history = ref<number[]>([]);
 
-const currentScene = computed<SceneType | undefined>(() =>{
+const currentScene = computed<SceneType | any >(() =>{
   return storyData.find((scene) => scene.id === currentSceneId.value)
 });
 
