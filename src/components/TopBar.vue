@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import iconClose from '/src/assets/icons/close.png';
+
 /* const props = */
 defineProps<{ title: string }>();
 
@@ -11,7 +13,7 @@ function closeButton() {
 <template>
   <div class="top-bar">
     <a href="/"><h1>{{ title }}</h1></a>
-    <button @click="closeButton"><img src="/src/assets/icons/close.png" width="360" height="360" alt="close icon" /></button>
+    <button @click="closeButton"><img :src="iconClose" width="360" height="360" alt="close icon" /></button>
   </div>
 </template>
 
