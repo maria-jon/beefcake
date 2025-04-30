@@ -1,12 +1,17 @@
 <script setup lang="ts">
 /* const props = */
 defineProps<{ title: string }>();
+
+function closeButton() {
+  console.log('close button');
+}
+
 </script>
 
 <template>
   <div class="top-bar">
     <h1>{{ title }}</h1>
-    <span><img src="" /></span>
+    <button @click="closeButton"><img src="/src/assets/icons/close.png" width="360" height="360" alt="close icon" /></button>
   </div>
 </template>
 
@@ -25,7 +30,12 @@ h1 {
   padding: 16px 10px;
   border-bottom: 4px solid #37312d;
 }
-span > img {
+button {
+  border: none;
+  background-color: transparent;
+}
+
+button > img {
   width: 45px;
   height: 45px;
 }
