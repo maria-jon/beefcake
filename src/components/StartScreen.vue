@@ -14,8 +14,8 @@ function handleChoice() {
   <TopBar title="Beefcake" />
   <div class="wrapper">
     <ContentDisplay src="src/assets/beefcake-sleeping-large.gif" width="760" height="760" alt="Beefcake sleeping" />
-    <OptionButton icon="/src/assets/vue.svg" msg="Start game" @click="handleChoice" />
-    <OptionButton icon="/src/assets/vue.svg" msg="About the game" />
+    <OptionButton src="src/assets/icons/heart.png" width="544" height="544" alt="icon" msg="Start game" @click="handleChoice" />
+    <OptionButton src="src/assets/icons/question-mark.png" width="272" height="272" alt="icon" msg="About the game" />
   </div>
 </template>
 <style scoped lang="scss">

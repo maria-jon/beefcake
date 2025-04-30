@@ -33,7 +33,10 @@ function selectChoice(choice: IChoice) {
       v-for="(choice, index) in scene.choices"
       :key="index"
       @click="selectChoice(choice)"
-      icon="/src/assets/vue.svg"
+      src="src/assets/icons/question-mark.png" 
+      width="544" 
+      height="544" 
+      alt="icon" 
       :msg="choice.text" 
       />
     </div>
