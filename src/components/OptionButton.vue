@@ -1,10 +1,16 @@
 <script setup lang="ts">
-defineProps<{ msg: string }>();
+const props = defineProps<{ 
+  src: string;
+  width: string;
+  height: string;
+  alt: string;
+  msg: string;
+ }>();
 </script>
 <template>
   <button>
-    <img src="" />
-    {{ msg }}
+    <img :src="props.src" :width="props.width" :height="props.height" :alt="props.alt" />
+    {{ props.msg }}
   </button>
 </template>
 <style scoped>
