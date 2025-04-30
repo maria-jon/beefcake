@@ -10,7 +10,7 @@ function closeButton() {
 
 <template>
   <div class="top-bar">
-    <h1>{{ title }}</h1>
+    <a href="/"><h1>{{ title }}</h1></a>
     <button @click="closeButton"><img src="/src/assets/icons/close.png" width="360" height="360" alt="close icon" /></button>
   </div>
 </template>
@@ -30,6 +30,11 @@ h1 {
   padding: 16px 10px;
   border-bottom: 4px solid #37312d;
 }
+
+a {
+  color: #f4f0ed;
+}
+
 button {
   border: none;
   background-color: transparent;
